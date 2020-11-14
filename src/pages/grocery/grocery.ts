@@ -68,9 +68,9 @@ export class GroceryPage {
     let itemIdx = idx + 1
     let message = `${itemIdx} - ${item.name} - Quantity: ${item.quantity} - Price: ${item.price}`
     this.socialSharing.share(message, "Sharing Items").then(() => {
-      // Success!
+      console.log(`successfully share ${item.name}`)
     }).catch(() => {
-      // Error!
+      alert(`Unable to share item ${item.name}`)
     });
   }
 
